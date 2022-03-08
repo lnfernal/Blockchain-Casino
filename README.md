@@ -22,53 +22,6 @@ Token Name: Casino Cash
 
 
 
-Token Symbol (Visual Element):
-
-
-
-Token Symbol Reasoning:
-Since the decentralized application is a UB based casino, the coin features UB’s bull mascot.
-
-
-
-
-UML use case diagram:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Wireframe:
-
-
-
-
-
 
 
 
