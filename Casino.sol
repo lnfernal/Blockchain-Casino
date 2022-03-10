@@ -4,7 +4,7 @@ pragma solidity ^0.6.0;
 contract Casino{
 
     address internal Cedric = 0x7FCe897A5f3F2dfee5c0dBF10b1073f6613a5E3e;
-    address internal Jack = 0x7FCe897A5f3F2dfee5c0dBF10b1073f6613a5E3e;
+    address internal Jack = 0x0xf667Eb467304D505B9fD484Aa622B9213c1B8920;
 
     //Struct to hold player information
     struct Player {
