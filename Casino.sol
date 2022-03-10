@@ -18,6 +18,11 @@ contract Casino{
         Player_Address = player.playerAddress;
     }
 
+    // This function will link offchain to a random number generator
+    function randomNum (uint256 numSize) private {
+
+    }
+
     function Slots(int256 bet) public{
         require(player.playerAddress != 0x0000000000000000000000000000000000000000);
         int256 payout;
