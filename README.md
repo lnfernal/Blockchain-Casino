@@ -10,9 +10,10 @@ Jack Anton,   jackanto@buffalo.edu
 
 
 Issues Addressed: 
-Distrust in online gambling (Security and Validity)
-Lack of transparency
-Lack of privacy and anonymity
+
+Distrust in online gambling (Security and Validity),
+Lack of transparency,
+Lack of privacy and anonymity,
 High transaction costs 
 
 Abstract:
