@@ -6,37 +6,57 @@ contract Casino{
     address internal Cedric = 0x7FCe897A5f3F2dfee5c0dBF10b1073f6613a5E3e;
     address internal Jack = 0x7FCe897A5f3F2dfee5c0dBF10b1073f6613a5E3e;
 
+    //Struct to hold player information
     struct Player {
         address playerAddress;
     }
-    Player player = Player({playerAddress: 0x0000000000000000000000000000000000000000});
-    int256 public Player_Funds = 0;
-    address public Player_Address = player.playerAddress;
 
-    function register(address _playerAddress) public {
-        player = Player({playerAddress: _playerAddress});
-        Player_Address = player.playerAddress;
+    //Struct to hold game information
+    struct Game {
+        string gameLink;
     }
 
-    // This function will link offchain to a random number generator
-    function randomNum (uint256 numSize) private {
-
+    //Struct to hold seller information
+    struct Seller{
+        address sellerAddress;
     }
 
-    function Slots(int256 bet) public{
-        require(player.playerAddress != 0x0000000000000000000000000000000000000000);
-        int256 payout;
-        //code for slots
-        payout = -1 * bet;
-        Player_Funds = Player_Funds + payout;
+    //mapping seller's address to an array of games in games
+    mapping(address => uint256) private addressToGamesID;
+
+    //array of players 
+    Player [] public players;
+    //array of sellers
+    Seller [] public sellers;
+    //array of array of games
+    Game [][] public games;
+
+    //sets player address
+    function registerPlayer(address _playerAddress) public {
+        players.push(Player(_playerAddress));
     }
 
-    function Roulette(int256 bet) public{
-        require(player.playerAddress != 0x0000000000000000000000000000000000000000);
-        int256 payout;
-        //code for roulette
-        payout = 1 * bet;
-        Player_Funds = Player_Funds + payout;
+    //sets seller address, 
+    //creates a new array of games in games initalized with _gameLink, 
+    //mapps seller address to a index in games
+    function registerSeller(address _sellerAddress, string memory _gameLink) public {
+        sellers.push(Seller(_sellerAddress));
+        games[games.length + 1].push(Game(_gameLink));
+        addressToGamesID[_sellerAddress] = games.length;
+        //need to add an inital deposit to add a game
     }
 
+    //adds a new game to the seller's array of games
+    function sellerAddGame(address _sellerAddress, string memory _gameLink) public {
+        uint256 gamesID = addressToGamesID[_sellerAddress];
+        games[gamesID].push(Game(_gameLink));
+    }
+
+    function playerBet(uint256 bet) public{
+        //IDK
+    }
+
+    function playerPayout(int256 payout) private {
+        //IDK
+    }
 }
