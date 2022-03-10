@@ -17,8 +17,7 @@ Abstract:
 Current online gambling is plagued with the following problems: distrust in online gambling, lack of transparency, lack of privacy, and high transaction costs. Traditionally, you would have to trust the centralized online gambling application you are using to make sure that they are not stacking the odds against the players. Due to the nature of a decentralized application, users would be able to see the app’s code, creating an assurance against an untrustworthy house.  Also, because the application is decentralized, users would be able to remain completely anonymous, securing their privacy. Additionally, current online gambling requires third parties to authenticate and verify the transfer of funds which can be both time consuming and expensive. With a decentralized system the funds are instantaneously transferred and don’t rely on third party authorities to verify the transaction, which saves both the casino and the player time and money. A decentralized gambling application using an ERC20 token would be able to create a trustworth platform that respects privacy and lowers the cost of transactions.
 
 Token Name: Casino Cash
-
-![Token Symbol](https://ibb.co/pz2whY9)
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/k8KBmNW/Casino-Cash.png" alt="Casino-Cash" border="0"></a>
 
 
 
