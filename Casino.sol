@@ -9,26 +9,29 @@ contract Casino{
     struct Player {
         address playerAddress;
     }
-    int256 public playerFunds = 0;
+    Player player = Player({playerAddress: 0x0000000000000000000000000000000000000000});
+    int256 public Player_Funds = 0;
+    address public Player_Address = player.playerAddress;
 
-    Player player = Player({playerAddress: 0x7FCe897A5f3F2dfee5c0dBF10b1073f6613a5E3e});
-
-    function register(address _playerAddress) public pure {
-        Player({playerAddress: _playerAddress});
+    function register(address _playerAddress) public {
+        player = Player({playerAddress: _playerAddress});
+        Player_Address = player.playerAddress;
     }
 
-    function Slots() public{
+    function Slots(int256 bet) public{
+        require(player.playerAddress != 0x0000000000000000000000000000000000000000);
         int256 payout;
         //code for slots
-        payout = -1;
-        playerFunds = playerFunds + payout;
+        payout = -1 * bet;
+        Player_Funds = Player_Funds + payout;
     }
 
-    function Roulette() public{
+    function Roulette(int256 bet) public{
+        require(player.playerAddress != 0x0000000000000000000000000000000000000000);
         int256 payout;
         //code for roulette
-        payout = 1;
-        playerFunds = playerFunds + payout;
+        payout = 1 * bet;
+        Player_Funds = Player_Funds + payout;
     }
 
 }
