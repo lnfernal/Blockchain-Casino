@@ -1,0 +1,45 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: blue;
+}
+
+#UB_logo{
+	float: left;
+	
+}
+
+#slots{
+	float: left;
+	display: inline;
+	padding-right: 50px;
+}
+
+#roulette{
+	float: left;
+	display: inline;
+}
+
+#additional_buttons{
+	/* float: bottom;
+	padding-top: 100px; */
+	text-align: right;
+	float: top;
+	
+}
+
+
+.button{
+	height: 60px;
+	width: 120px;
+	background-color: white;
+	color: blue;
+	text-align: center;
+	/* padding-top: 30px; */
+	font-size: 20px;
+	border-radius: 25px;
+}
+
+a {
+  color: #00B7FF;
+}

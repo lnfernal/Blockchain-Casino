@@ -1,0 +1,13 @@
+[
+  {
+    "id": 0,
+    "name": "Roulette",
+    "picture": "images/roulette.png"
+  },
+  {
+    "id": 1,
+    "name": "Slots",
+    "picture": "images/slots.jpg"
+  }
+
+]
