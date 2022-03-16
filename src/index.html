@@ -40,19 +40,29 @@
 	
 	
 	
+	<div id="games">	
+		<div id="slots">
+			<img style="width: 230px; height: 280px;" src="images/slots.jpg">
+			<br>
+			<button class="button" id="slots" onclick="window.location.href = '/slots.html'">Slots</button>
+		</div>
+			
 		
-	<div id="slots">
-		<img style="width: 230px; height: 280px;" src="images/slots.jpg">
-		<br>
-		<button class="button" id="slots" onclick="window.location.href = '/slots.html'">Slots</button>
-	</div>
 		
-	
-	
-	<div id="roulette">
-		<img style="width: 230px; height: 280px;" src="images/roulette.png">
-		<br>
-		<button class="button" id="roulette" onclick="window.location.href = '/roulette.html'">Roulette</button>
+		<div id="roulette">
+			<img style="width: 230px; height: 280px;" src="images/roulette.png">
+			<br>
+			<button class="button" id="roulette" onclick="window.location.href = '/roulette.html'">Roulette</button>
+		</div>
+		
+		<div id="popupForm">
+			<form id="form1">
+				Game Name<input id="game_name" type="text">
+				Game URL<input id="game_url" type="text">
+				
+			</form>
+			<button id="form_submit" onclick="addGameInfo()">Submit</button>
+		</div>
 	</div>
 		
 
@@ -61,11 +71,12 @@
 		  <div class="row" id="register_div">
 			<div>
 			<button class="button" onclick="window.location.href='https://github.com/CedricBone/Blockchain-Casino';" type="button" id="about_us" > About Us </button>
-			<button class="button" type="button" id="add_game">Add Game</button>
+			<button class="button" type="button" id="add_game" onclick="addGame()">Add Game</button>
 			</div>
 		  </div>
 		  <br>
 		</div>
+		
     </div>
 
 
