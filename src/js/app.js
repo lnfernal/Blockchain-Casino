@@ -145,7 +145,37 @@ App = {
       console.log(err.message);
     })
   }
+  
+/*   addGame: function(){
+	console.log("Add game clicked");
+  } */
+
 };
+
+  function addGame(){
+	console.log("Add game clicked");
+	  //document.getElementById("games").innerHTML 
+	document.getElementById("popupForm").style.display = "block";
+  }
+  
+  function addGameInfo(){
+	  //console.log("submit clicked");
+	  game_name = document.getElementById("game_name").value;
+	  console.log(game_name);
+	  game_url = document.getElementById("game_url").value;
+	  console.log(game_url);
+	  
+	  var game_button = document.createElement("button");
+	  game_button.setAttribute("id", game_name);
+	  game_button.setAttribute("class", "button");
+	  //game_button.setAttribute("innerHTML", game_name);
+	  game_button.textContent = game_name;
+	  game_button.setAttribute("onclick", "window.location.href = '" + game_url + "';");
+	  
+	  
+	  var container = document.getElementById("games");
+	  container.appendChild(game_button);
+  }
 
 $(function() {
   $(window).load(function() {
