@@ -29,6 +29,26 @@ body {
 }
 
 
+#popupForm{
+	display: none;
+	position: fixed;
+	/* right: 15%; */
+	left: 85%;
+	top: 50%;
+	transform: translate(-50%, 5%);
+	border: 3px solid #999999;
+	z-index: 9;
+	background-color: grey;
+	color: white;
+	font-size:20px;
+	
+}
+
+#form_submit{
+	background-color: green;
+}
+
+
 .button{
 	height: 60px;
 	width: 120px;
