@@ -1,4 +1,4 @@
-var options = ["$100", "$10", "$25", "$250", "$30", "$1000", "$1", "$200", "$45", "$500", "$5", "$20", "Lose", "$1000000", "Lose", "$350", "$5", "$99"];
+var options = ["0", "32", "15", "19", "4", "21", "2", "25", "17", "34", "6", "27", "13", "36", "11", "30", "8", "23"];
 
 var startAngle = 0;
 var arc = Math.PI / (options.length / 2);
@@ -10,14 +10,28 @@ var spinTimeTotal = 0;
 
 var ctx;
 
+var bet_amount;
+var number;
+
 document.getElementById("spin").addEventListener("click", spin);
+
+
+drawRouletteWheel();
+
+
+function getValues(){
+	bet_amount = document.getElementById("bet_amount").value;
+	console.log("bet amount: ", bet_amount);
+	number = document.getElementById("number").value;
+	console.log("selected number: ", number);
+}
 
 function byte2Hex(n) {
   var nybHexString = "0123456789ABCDEF";
   return String(nybHexString.substr((n >> 4) & 0x0F,1)) + nybHexString.substr(n & 0x0F,1);
 }
 
-function RGB2Color(r,g,b) {
+/* function RGB2Color(r,g,b) {
 	return '#' + byte2Hex(r) + byte2Hex(g) + byte2Hex(b);
 }
 
@@ -32,7 +46,7 @@ function getColor(item, maxitem) {
   blue  = Math.sin(frequency*item+4+phase) * width + center;
   
   return RGB2Color(red,green,blue);
-}
+} */
 
 function drawRouletteWheel() {
   var canvas = document.getElementById("canvas");
@@ -52,7 +66,7 @@ function drawRouletteWheel() {
     for(var i = 0; i < options.length; i++) {
       var angle = startAngle + i * arc;
       //ctx.fillStyle = colors[i];
-      ctx.fillStyle = getColor(i, options.length);
+      //ctx.fillStyle = getColor(i, options.length);
 
       ctx.beginPath();
       ctx.arc(250, 250, outsideRadius, angle, angle + arc, false);
@@ -75,7 +89,7 @@ function drawRouletteWheel() {
     } 
 
     //Arrow
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "yellow";
     ctx.beginPath();
     ctx.moveTo(250 - 4, 250 - (outsideRadius + 5));
     ctx.lineTo(250 + 4, 250 - (outsideRadius + 5));
@@ -94,6 +108,8 @@ function spin() {
   spinTime = 0;
   spinTimeTotal = Math.random() * 3 + 4 * 1000;
   rotateWheel();
+  getValues();
+  document.getElementById("game_result").innerHTML = "";
 }
 
 function rotateWheel() {
@@ -116,8 +132,21 @@ function stopRotateWheel() {
   ctx.save();
   ctx.font = 'bold 30px Helvetica, Arial';
   var text = options[index]
+  
   ctx.fillText(text, 250 - ctx.measureText(text).width / 2, 250 + 10);
   ctx.restore();
+  
+  console.log("winning number: ", text);
+  
+  if(number == text){
+	  console.log("YOU WIN");
+	  document.getElementById("game_result").innerHTML = "YOU WIN";
+  }
+  else{
+	  console.log("YOU LOSE");
+	  document.getElementById("game_result").innerHTML = "YOU LOSE";
+  }
+  
 }
 
 function easeOut(t, b, c, d) {
@@ -126,4 +155,3 @@ function easeOut(t, b, c, d) {
   return b+c*(tc + -3*ts + 3*t);
 }
 
-drawRouletteWheel();
