@@ -26,7 +26,7 @@ Token Name: Casino Cash
 
 
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/SEIw8zM" data-context="false" ><a href="//imgur.com/a/SEIw8zM"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/SEIw8zM" data-context="false" ><a href="//imgur.com/a/SEIw8zM"></a></blockquote><script async src="//imgur.com/a/SEIw8zM" charset="utf-8"></script>
 
 
 
