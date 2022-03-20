@@ -26,7 +26,7 @@ Token Name: Casino Cash
 
 
 
-<a href="https://imgur.com/a/SEIw8zM"><img src="https://i.ibb.co/XYqphRF/Casino-Cash.png" alt="Lucky-Blue" border="0"></a>
+<a href="https://imgur.com/"><img src="https://imgur.com/a/SEIw8zM" alt="Lucky-Blue" border="0"></a>
 
 
 
