@@ -1,4 +1,4 @@
-##Blockchain Gambling Application
+Blockchain Gambling Application
 
 Title: Lucky Blue Casino
 
@@ -25,8 +25,8 @@ Token Name: Casino Cash
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/XYqphRF/Casino-Cash.png" alt="Casino-Cash" border="0"></a>
 
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/SEIw8zM" data-context="false" ><a href="//imgur.com/a/SEIw8zM"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
+<a href="https://imgur.com/a/SEIw8zM"><img src="https://i.ibb.co/XYqphRF/Casino-Cash.png" alt="Lucky-Blue" border="0"></a>
 
 
 
